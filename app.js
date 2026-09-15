@@ -224,7 +224,7 @@ function randomBird(birds){
      
      .then(data=>{
        if(data.Status && data.Status === "Error"){
-        // alert("hubo un error en wiki");
+        /*alert("hubo un error en wiki");*/
          randomBird(countBird);
        }
        aveAleatoria.bird = data
