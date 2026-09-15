@@ -61,7 +61,7 @@ let imagen; let nombreComun = document.getElementById("comName000");
 
   //
  if(!randomState){
-fetch(`http://localhost:8000/AveaDiversas.php?nombre=${nombreCientifico}`)
+fetch(`./AveaDiversas.php?nombre=${nombreCientifico}`)
 .then(r => r.json())
   .then(data =>{
     /*
@@ -219,7 +219,7 @@ function randomBird(birds){
    let spinner = document.getElementById("search-spinner");
   let nombreCientifico = AvesDataSet[azar].sciName;
   let bird2 = AvesDataSet[azar];
-   fetch(`http://localhost:8000/AveaDiversas.php?nombre=${nombreCientifico}`)
+   fetch(`./AveaDiversas.php?nombre=${nombreCientifico}`)
     .then(r => r.json())
      
      .then(data=>{
@@ -263,7 +263,7 @@ let AvesDataSet = [];
 
 /*Todavia np voy a usar una base de datos propia voy a quitar esta condicional*/
 //if(AvesDataSet.length === 0){
-fetch('http://localhost:8000/AveaDiversas.php')
+fetch('./AveaDiversas.php')
     .then(r => r.json())
     .then(data=>{
                 // alert("funcionoFETH" + "AvesDataSet vale cero" + JSON.stringify(AvesDataSet));
