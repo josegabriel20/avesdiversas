@@ -27,7 +27,7 @@ echo json_encode([
 ]);
 exit;
 }
-
+$userAgent = $_ENV['WIKI'];
 $nombreWiki = str_replace(' ','_',$nombre);
 
 $url = "https://es.wikipedia.org/api/rest_v1/page/summary/" . urlencode($nombreWiki);	
