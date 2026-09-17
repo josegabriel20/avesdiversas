@@ -34,7 +34,7 @@ $url = "https://es.wikipedia.org/api/rest_v1/page/summary/" . urlencode($nombreW
 
 $ch = curl_init($url);
 curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_USERAGENT,$userAgent;
+curl_setopt($ch, CURLOPT_USERAGENT,$userAgent);
 $respuestaAve = curl_exec($ch);
 $httpinfo = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 if( $httpinfo === 200){
