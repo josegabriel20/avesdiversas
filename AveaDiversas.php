@@ -4,8 +4,8 @@ header("Content-Type:application/json");
 require_once __DIR__ . '/vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
-/*c9508d5b-b7b8-477e-8b94-93902fbefdba*/
-$claverespaldo ="c9508d5b-b7b8-477e-8b94-93902fbefdba";
+
+
 $clave = $_ENV['EBIRD'];
 $ruta = "https://api.ebird.org/v2/ref/taxonomy/ebird?fmt=json&locale=es";
 
@@ -34,7 +34,7 @@ $url = "https://es.wikipedia.org/api/rest_v1/page/summary/" . urlencode($nombreW
 
 $ch = curl_init($url);
 curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
-curl_setopt($ch, CURLOPT_USERAGENT,'AvesDiversas/1.0 (josegabrielbermudez2007@gmail.com)');
+curl_setopt($ch, CURLOPT_USERAGENT,$userAgent;
 $respuestaAve = curl_exec($ch);
 $httpinfo = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 if( $httpinfo === 200){
