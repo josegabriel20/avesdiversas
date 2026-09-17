@@ -1,8 +1,12 @@
 <?php 
 header("Access-Control-Allow-Origin:*");
 header("Content-Type:application/json");
+require_once __DIR__ . '/vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 /*c9508d5b-b7b8-477e-8b94-93902fbefdba*/
-$clave ="c9508d5b-b7b8-477e-8b94-93902fbefdba";
+$claverespaldo ="c9508d5b-b7b8-477e-8b94-93902fbefdba";
+$clave = $_ENV['EBIRD'];
 $ruta = "https://api.ebird.org/v2/ref/taxonomy/ebird?fmt=json&locale=es";
 
 
